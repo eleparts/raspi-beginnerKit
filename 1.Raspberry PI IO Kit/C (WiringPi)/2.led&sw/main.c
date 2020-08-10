@@ -9,6 +9,8 @@
 * SW 1  : GPIO 31번 | BCM :  6 | wiringPi : 22 
 * SW 1  : GPIO 33번 | BCM : 13 | wiringPi : 23 
 *
+* 스위치를 연결할때는 VCC에 저항을 연결해 풀업 회로를 구성해 줍니다, 이때 VCC가 GND와 바로 연결되지 않도록(쇼트) 주의해야 합니다.
+*
 * 키트 정보 : https://www.eleparts.co.kr/EPXDTWPM
 */
 
