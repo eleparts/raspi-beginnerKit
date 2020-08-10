@@ -48,22 +48,21 @@ int main (void){
     if(digitalRead(SW_Y) == 0){  // 노랑색 LED용 스위치가 눌리면
   
       digitalWrite(LED_Y, 1); // 노랑색 LED On
-      delay(500) ; // mS
+      delay(500); // mS
     }
 
     if(digitalRead(SW_R) == 0){  // 빨간색 LED용 스위치가 눌리면
 
       digitalWrite(LED_R, 1); // 빨간색 LED On
-      delay(500) ; // mS
+      delay(500); // mS
      }
 
      if(digitalRead(SW_G) == 0){  // 초록색 LED용 스위치가 눌리면
 
       digitalWrite(LED_G, 1); // 초록색 LED On
-      delay(500) ; // mS
+      delay(500); // mS
     }
   }
 
   return 0;
-
 }

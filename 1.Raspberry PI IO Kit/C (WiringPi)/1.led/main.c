@@ -13,7 +13,6 @@
 #define LED1 4 // BCM_GPIO 23
 
 
-
 int main (void){
 
   if(wiringPiSetup() == -1){
@@ -33,5 +32,4 @@ int main (void){
   }
 
   return 0;
-
 }
