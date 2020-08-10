@@ -2,7 +2,7 @@
 * 라즈베리파이 입출력 키트 LED 구동 예제 01.led
 * 
 * 사용 소자 : LED 1ea, 저항 1ea(220옴 권장)
-* LED 1 : GPIO 16 (BCM 23, wiringPi 4) 
+* LED 1 : GPIO 16번 | BCM : 23 | wiringPi : 4
 *
 * 키트 정보 : https://www.eleparts.co.kr/EPXDTWPM
 */
