@@ -11,10 +11,27 @@
 ```bash
 sudo python3 (예제 파일명).py
 ```
+
 ex)
+
 ```bash
 sudo python3 led.py
 sudo python3 ledsw.py
 ```
 
 예제 종료는 **`CTRL + C`** 키를 눌러 주시면 됩니다.
+
+## 예제 코드 간단 설명  
+
+### 1.led  
+
+LED 1개의 ON/OFF 반복 동작을 합니다.  
+
+### 2.led&sw  
+
+LED 3개 및 SW(스위치) 3개를 이용해 각 스위치를 누르면 해당하는 LED가 0.5초간 켜집니다.  
+
+### 3.potentiometer  
+
+가변저항으로 변화하는 전압을 입력받아 LED를 ON/OFF 해 줍니다.  
+※ 라즈베리파이의 GPIO에는 ADC가 없으며, ADC 기능을 사용하는것이 아닌 단순 디지털 입력 (H/L)으로 제어합니다. (상세 설명은 코드 참조)  
