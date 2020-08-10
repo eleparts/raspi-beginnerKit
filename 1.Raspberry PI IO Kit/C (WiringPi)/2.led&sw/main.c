@@ -19,9 +19,9 @@
 #define LED_R 28 // BCM_GPIO 20 빨간색 LED 정의
 #define LED_G 29 // BCM_GPIO 21 초록색 LED 정의
 
-#define SW_Y 21 // BCM_GPIO 5  노랑색 LED용 스위치 정의
-#define SW_R 22 // BCM_GPIO 6  빨간색 LED용 스위치 정의
-#define SW_G 23 // BCM_GPIO 13 초록색 LED용 스위치 정의
+#define SW_Y 21 // BCM_GPIO 5  노랑색 LED제어 스위치 정의
+#define SW_R 22 // BCM_GPIO 6  빨간색 LED제어 스위치 정의
+#define SW_G 23 // BCM_GPIO 13 초록색 LED제어 스위치 정의
 
 
 int main (void){
@@ -34,9 +34,9 @@ int main (void){
   pinMode(LED_R, OUTPUT); // 빨간색 LED 출력핀으로 설정
   pinMode(LED_G, OUTPUT); // 초록색 LED 출력핀으로 설정
 
-  pinMode(SW_Y, INPUT);   // 노랑색 LED용 스위치 입력핀으로 설정
-  pinMode(SW_R, INPUT);   // 빨간색 LED용 스위치 입력핀으로 설정
-  pinMode(SW_G, INPUT);   // 초록색 LED용 스위치 입력핀으로 설정
+  pinMode(SW_Y, INPUT);   // 노랑색 LED제어 스위치 입력핀으로 설정
+  pinMode(SW_R, INPUT);   // 빨간색 LED제어 스위치 입력핀으로 설정
+  pinMode(SW_G, INPUT);   // 초록색 LED제어 스위치 입력핀으로 설정
 
 
   while(1){
@@ -45,19 +45,19 @@ int main (void){
     digitalWrite(LED_R, 0); // LED 초기값 Off
     digitalWrite(LED_G, 0); // LED 초기값 Off
 
-    if(digitalRead(SW_Y) == 0){  // 노랑색 LED용 스위치가 눌리면
+    if(digitalRead(SW_Y) == 0){  // 노랑색 LED제어 스위치가 눌리면
   
       digitalWrite(LED_Y, 1); // 노랑색 LED On
       delay(500); // mS
     }
 
-    if(digitalRead(SW_R) == 0){  // 빨간색 LED용 스위치가 눌리면
+    if(digitalRead(SW_R) == 0){  // 빨간색 LED제어 스위치가 눌리면
 
       digitalWrite(LED_R, 1); // 빨간색 LED On
       delay(500); // mS
      }
 
-     if(digitalRead(SW_G) == 0){  // 초록색 LED용 스위치가 눌리면
+     if(digitalRead(SW_G) == 0){  // 초록색 LED제어 스위치가 눌리면
 
       digitalWrite(LED_G, 1); // 초록색 LED On
       delay(500); // mS

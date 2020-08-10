@@ -47,3 +47,5 @@ gcc -o main main.c -lwiringPi
 
 sudo ./main
 ```
+
+예제 종료는 **`CTRL + C`** 키를 눌러 주시면 됩니다.
