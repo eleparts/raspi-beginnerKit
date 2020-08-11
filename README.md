@@ -1,16 +1,18 @@
 # raspi-beginnerKit  
 
-엘레파츠의 라즈베리파이 입출력 키트 및 센서키트 예제코드&실행 방법이 안내되어 있습니다.  
-  
+엘레파츠의 라즈베리파이 **입출력 키트(I/O Kit)** 및 **센서키트(Sensor Kit)**의 예제코드 GitHub 페이지 입니다.  
+
+키트별 예제 실행방법에 대한 상세 설명은 **[키트]**-> **[언어(C/Python)]** 페이지에 다시 안내되어 있습니다.  
+
 ## 예제 코드 사용을 위한 준비사항  
 
 라즈베리파이 업데이트  
 
 ```bash
-sudo apt-get update && sudo apt-get upgrade
+sudo apt-get update && sudo apt-get upgrade  
 ```
 
-예제 코드 다운로드  
+예제 코드 다운로드 **(라즈베리파이 터미널에서 실행)**  
 
 ```bash
 git clone https://github.com/eleparts/raspi-beginnerKit  
@@ -51,8 +53,8 @@ python3는 아래 명령어로 설치가 가능합니다.
 sudo apt-get install python3  
 ```
 
-## 입출력 & 센서 키트 바로가기  
+## 엘레파츠 입출력 & 센서 키트 바로가기  
 
-[라즈베리파이 입출력 키트](https://www.eleparts.co.kr/EPXDTWPM)  
+[라즈베리파이 입출력(I/O) 키트](https://www.eleparts.co.kr/EPXDTWPM)  
 
 [라즈베리파이 센서 키트](https://www.eleparts.co.kr/EPXDTWR8)  
