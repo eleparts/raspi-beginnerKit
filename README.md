@@ -22,7 +22,7 @@ ls -l
 
 ### C언어  
 
-을 위한 wirringPi 라이브러리 설치  
+C언어 예제 실행을 위해서는 wirringPi 라이브러리 설치가 필요합니다.  
 
 소스 관리 툴(git)다운로드 및 WiringPi 설치  
 
