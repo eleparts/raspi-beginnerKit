@@ -17,13 +17,13 @@
 #include <stdio.h>
 #include <wiringPi.h>
 
-#define LED_Y 27 // BCM_GPIO 16 노랑색 LED 정의
-#define LED_R 28 // BCM_GPIO 20 빨간색 LED 정의
-#define LED_G 29 // BCM_GPIO 21 초록색 LED 정의
+#define LED_Y 27 // 노랑색 LED wiringPi 번호 정의
+#define LED_R 28 // 빨간색 LED wiringPi 번호 정의
+#define LED_G 29 // 초록색 LED wiringPi 번호 정의
 
-#define SW_Y 21 // BCM_GPIO 5  노랑색 LED제어 스위치 정의
-#define SW_R 22 // BCM_GPIO 6  빨간색 LED제어 스위치 정의
-#define SW_G 23 // BCM_GPIO 13 초록색 LED제어 스위치 정의
+#define SW_Y 21 // 노랑색 LED제어 스위치 wiringPi 번호 정의
+#define SW_R 22 // 빨간색 LED제어 스위치 wiringPi 번호 정의
+#define SW_G 23 // 초록색 LED제어 스위치 wiringPi 번호 정의
 
 
 int main (void){

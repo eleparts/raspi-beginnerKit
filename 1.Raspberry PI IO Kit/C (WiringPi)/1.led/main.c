@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <wiringPi.h>
 
-#define LED1 4 // BCM_GPIO 23
+#define LED1 4 // LED wiringPi 핀 번호 정의
 
 
 int main (void){
