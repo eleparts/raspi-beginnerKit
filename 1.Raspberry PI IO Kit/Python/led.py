@@ -9,7 +9,7 @@
 import RPi.GPIO as GPIO
 import time
 
-LED = 23 # BCM 23 Pin | GPIO 16
+LED = 23 # LED 핀 번호 정의 BCM 23 Pin | GPIO 16
 
 # GPIO.setwarnings (False)  #GPIO 사용중 경고 비활성화 명령, GPIO.cleanup() 사용 시 불필요
 
