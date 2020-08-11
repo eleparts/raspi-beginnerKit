@@ -36,7 +36,7 @@ int main (void){
 
   while(1){
 
-    if(digitalRead(SW_Y)){  // 가변저항으로 입력되는 값이 HIGH인 경우
+    if(digitalRead(potentiometer)){  // 가변저항으로 입력되는 값이 HIGH인 경우
   
       digitalWrite(LED, 1); // 노랑색 LED On
       delay(500); // 500ms(0.5초) 지연
