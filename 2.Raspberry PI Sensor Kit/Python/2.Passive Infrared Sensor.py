@@ -5,7 +5,9 @@
 * 
 * 사용 소자 : LED 1ea, 저항 1ea (220옴), PIR 센서 
 * LED     : GPIO 38번 | BCM : 20
-* PIR 센서 : GPIO 40번 | BCM : 21
+* PIR 센서 
+* VCC 핀 : 5V | GND 핀 : GND
+* OUT :  GPIO 40번 | BCM : 21 | wiringPi : 29
 *
 * ※ 모듈 및 LED 연결 시 극성에 주의해 주도록 합니다.
 * PIR 센서는 물체의 움직임이 감지되면 일정 시간동안 OUT 포트로 HIGH 시간을 출력합니다. 

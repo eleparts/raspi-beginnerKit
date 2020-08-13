@@ -4,8 +4,10 @@
 * 본 예제는 PIR 센서로 물체가 감지되면 LED를 켜고, 시간이 지나 PIR 센서의 감지가 중단되면 LED를 꺼 주는 동작을 합니다.
 * 
 * 사용 소자 : LED 1ea, 저항 1ea (220옴), PIR 센서 
-* LED     : GPIO 38번 | BCM : 20 | wiringPi : 28 
-* PIR 센서 : GPIO 40번 | BCM : 21 | wiringPi : 29 
+* LED : GPIO 38번 | BCM : 20 | wiringPi : 28 
+* PIR 센서 
+* VCC 핀 : 5V | GND 핀 : GND
+* OUT :  GPIO 40번 | BCM : 21 | wiringPi : 29
 *
 * ※ 모듈 및 LED 연결 시 극성에 주의해 주도록 합니다.
 * PIR 센서는 물체의 움직임이 감지되면 일정 시간동안 OUT 포트로 HIGH 시간을 출력합니다. 
