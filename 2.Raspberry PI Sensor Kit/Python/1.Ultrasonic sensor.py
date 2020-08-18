@@ -1,9 +1,9 @@
 '''
-* 라즈베리파이 센서 키트 Ultrasonic Sensor 동작 예제
+* 라즈베리파이 센서 키트 Ultrasonic sensor 동작 예제
 *
-* 본 예제는 ultrasonic sensor(초음파 거리측정)의 예제로 초음파 센서와 물체의 거리를 터미널 창으로 실시간 출력해 줍니다.
+* 본 예제는 Ultrasonic sensor(초음파 거리측정)의 예제로 초음파 센서와 물체의 거리를 터미널 창으로 실시간 출력해 줍니다.
 * 
-* 사용 소자 : ultrasonic 센서
+* 사용 소자 : Ultrasonic 센서
 * VCC 핀  : 5V | GND 핀 : GND
 * TRIG핀  : GPIO 38번 | BCM : 20
 * ECHO핀  : GPIO 40번 | BCM : 21
