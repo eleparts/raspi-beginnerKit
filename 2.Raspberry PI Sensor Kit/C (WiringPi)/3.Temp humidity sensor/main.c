@@ -48,7 +48,7 @@ void read_dht_data(){
   /* DHT Data 핀을 READ로 변경해 데이터 수신 준비 */
   pinMode( DHT_PIN, INPUT );
  
-  /* 응답 준비 + ready 신호 및 DATA 신호 분류&저장 */
+  /* 응답 준비, ready 신호(0~3) 및 DATA 신호(40*2) 길이(counter 이용) 저장 */
   for ( int i = 0; i < MAX_TIMINGS; i++ ){
     counter = 0;
     while ( digitalRead( DHT_PIN ) == laststate ){
@@ -72,7 +72,7 @@ void read_dht_data(){
   /* 
   * 저장된 데이터 가공처리 
   * DHT 11의 데이터는 50us의 LOW 신호 이후 HIGH의 신호 길이에 따라 데이터를 LOW / HIGH로 구별합니다. (28us : LOW, 70us : HIGH)
-  * 이를 이용하여 앞의 LOW 신호와 뒤의 HIGH 신호의 길이를 비교해 HIGH/LOW 데이터로 구분(가공)할 수 있습니다.
+  * 이를 이용하여 앞의 LOW 신호 길이를 기준으로 뒤의 HIGH 신호의 길이를 비교해 HIGH/LOW 데이터로 구분할 수 있습니다.
   */
   for ( int i = 0; i < MAX_TIMINGS; i++ ){
 
@@ -82,6 +82,7 @@ void read_dht_data(){
       /* 온&습도 데이터 저장 */
       data[get_data / 8] <<= 1;
 
+      /* 뒤의 HIGH 신호의 길이가 앞의 LOW 신호보다 짧으면 LOW, 길면 HIGH 로 분류, 저장 */
       if ( data_cnt[i] > data_cnt[i-1] ){
         data[get_data / 8] |= 1;
       }
