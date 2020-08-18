@@ -7,7 +7,7 @@
 * LED     : GPIO 38번 | BCM : 20
 * 아날로그 사운드 센서
 * VCC 핀  : 3.3V | GND 핀 : GND
-* DOUT    :  GPIO 40번 | BCM : 21
+* DOUT    : GPIO 40번 | BCM : 21
 *
 * ※ 모듈 연결 시 극성에 주의해 주도록 합니다.
 * 라즈베리파이는 아날로그 신호(AOUT) 수신이 되지 않기 때문에 디지털 핀(DOUT)만 사용합니다. 
@@ -19,7 +19,7 @@ import RPi.GPIO as GPIO
 import time
 
 LED   = 20  # LED BCM 핀 번호 정의
-DOUT  = 21 # Sound 센서 DOUT 핀 BCM 핀 번호 정의
+DOUT  = 21  # Sound 센서 DOUT 핀 BCM 핀 번호 정의
 
 # GPIO.setwarnings (False)  #GPIO 사용중 경고 비활성화 명령, GPIO.cleanup() 사용 시 불필요
 
@@ -28,7 +28,7 @@ GPIO.setmode(GPIO.BCM)      #BCM 핀 번호 사용
 GPIO.setup(LED, GPIO.OUT)   # LED 제어 핀을 출력으로 설정
 GPIO.setup(DOUT, GPIO.IN)   # Sound 센서 데이터 수신 핀을 입력으로 설정
 
-GPIO.output(LED, False)   # LED 초기값 Off
+GPIO.output(LED, False)     # LED 초기값 Off
 
 try:
 
