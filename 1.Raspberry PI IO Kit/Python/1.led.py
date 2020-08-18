@@ -4,10 +4,11 @@
 * 본 예제는 LED 1개를 반복해서 ON/OFF(1초) 해 줍니다.
 *
 * 사용 소자 : LED 1ea, 저항 1ea(220옴 권장)
-* LED 1 : GPIO 16번 | BCM : 23 
+* LED 1 : GPIO 16번 | BCM : 23
 *
 * 키트 정보 : https://www.eleparts.co.kr/EPXDTWPM
 """
+
 import RPi.GPIO as GPIO
 import time
 

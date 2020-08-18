@@ -1,5 +1,5 @@
 /*
-* 라즈베리파이 센서 키트 Passive Infrared Sensor (PIR sensor) 동작 예제
+* 라즈베리파이 센서 키트 Passive Infrared sensor (PIR sensor) 동작 예제
 *
 * 본 예제는 PIR 센서로 물체가 감지되면 LED를 켜고, 시간이 지나 PIR 센서의 감지가 중단되면 LED를 꺼 주는 동작을 합니다.
 * 

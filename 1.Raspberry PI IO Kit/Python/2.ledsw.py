@@ -4,12 +4,12 @@
 * 본 예제는 3개의 스위치를 누르면 각각의 스위치에 해당하는 LED를 켜는 동작을 수행 합니다.
 * 
 * 사용 소자 : LED 3ea, 스위치 3ea, 저항 3x2ea (220옴(led) 3ea, 10k옴(스위치) 3ea 권장)
-* LED 1 : GPIO 36번 | BCM : 16 
-* LED 2 : GPIO 38번 | BCM : 20 
-* LED 3 : GPIO 40번 | BCM : 21 
-* SW 1  : GPIO 29번 | BCM :  5 
-* SW 1  : GPIO 31번 | BCM :  6 
-* SW 1  : GPIO 33번 | BCM : 13 
+* LED 1 : GPIO 36번 | BCM : 16
+* LED 2 : GPIO 38번 | BCM : 20
+* LED 3 : GPIO 40번 | BCM : 21
+* SW 1  : GPIO 29번 | BCM :  5
+* SW 1  : GPIO 31번 | BCM :  6
+* SW 1  : GPIO 33번 | BCM : 13
 *
 * 스위치를 연결할때는 VCC에 저항을 연결해 풀업 회로를 구성해 줍니다, 이때 VCC가 GND와 바로 연결되지 않도록(쇼트) 주의해야 합니다.
 *
