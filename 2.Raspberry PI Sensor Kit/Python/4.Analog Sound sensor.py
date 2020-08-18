@@ -21,12 +21,12 @@ import time
 LED   = 20  # LED BCM 핀 번호 정의
 DOUT  = 21  # Sound 센서 DOUT 핀 BCM 핀 번호 정의
 
-# GPIO.setwarnings (False)  #GPIO 사용중 경고 비활성화 명령, GPIO.cleanup() 사용 시 불필요
+# GPIO.setwarnings (False)  # GPIO 사용중 경고 비활성화 명령, GPIO.cleanup() 사용 시 불필요
 
-GPIO.setmode(GPIO.BCM)      #BCM 핀 번호 사용
+GPIO.setmode(GPIO.BCM)      # BCM 핀 번호 사용
 
 GPIO.setup(LED, GPIO.OUT)   # LED 제어 핀을 출력으로 설정
-GPIO.setup(DOUT, GPIO.IN)   # Sound 센서 데이터 수신 핀을 입력으로 설정
+GPIO.setup(DOUT, GPIO.IN)   # Sound 센서 디지털 데이터 수신 핀을 입력으로 설정
 
 GPIO.output(LED, False)     # LED 초기값 Off
 
@@ -34,7 +34,7 @@ try:
 
   while 1:
 
-    if (GPIO.input(DOUT) == 0) :  # Sound 센서로부터 신호가 수신되면 (기본 HIGH, 소리 인식시 LOW)
+    if (GPIO.input(DOUT) == 0) :  # Sound 센서로부터 신호가 수신되면 (대기 HIGH, 소리 인식시 LOW)
 
       GPIO.output(LED, True)      # LED On
       time.sleep(0.5)             # 0.5초 지연

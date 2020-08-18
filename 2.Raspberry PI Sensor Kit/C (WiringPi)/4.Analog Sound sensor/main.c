@@ -19,7 +19,7 @@
 #include <wiringPi.h>
 
 #define LED  28 // LED wiringPi 번호 정의
-#define DOUT 29 // Sound 센서 DOUT 핀 BCM 핀 번호 정의
+#define DOUT 29 // Sound 센서 DOUT 핀 wiringPi 핀 번호 정의
 
 
 int main (void){
@@ -29,13 +29,13 @@ int main (void){
   }
 
   pinMode(LED, OUTPUT);     // LED 제어 핀을 출력으로 설정
-  pinMode(DOUT, INPUT);     // Sound 센서 데이터 수신 핀을 입력으로 설정
+  pinMode(DOUT, INPUT);     // Sound 센서 디지털 데이터 수신 핀을 입력으로 설정
 
   digitalWrite(LED, 0);     // LED 초기값 Off
 
   while(1){
 
-    if(digitalRead(DOUT) == 0){   // Sound 센서로부터 신호가 수신되면
+    if(digitalRead(DOUT) == 0){   // Sound 센서로부터 신호가 수신되면 (대기 HIGH, 소리 인식시 LOW)
   
       digitalWrite(LED, 1);       // LED On
       delay(500);                 // 500mS 지연
