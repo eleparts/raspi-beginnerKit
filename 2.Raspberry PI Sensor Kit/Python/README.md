@@ -49,8 +49,8 @@ sudo python3 -m pip install --upgrade pip setuptools wheel
 
 ### 4.Analog Sound Sensor  
 
-아날로그 사운드 센서  
+아날로그 사운드 센서 : 소리가 감지되면 잠시 LED를 켜 줍니다.  
 
 ### 5.Capacitive Touch Sensor  
 
-디지털 정전식 터치센서  
+디지털 정전식 터치센서 : 터치가 감지되면 LED를 켜 줍니다.  
