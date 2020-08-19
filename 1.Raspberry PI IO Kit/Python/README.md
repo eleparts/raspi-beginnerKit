@@ -1,6 +1,6 @@
 # Raspberry PI I/O Kit  
 
-[라즈베리파이 입출력 키트](https://www.eleparts.co.kr/EPXDTWPM)  
+[라즈베리파이 입출력 키트](https://www.eleparts.co.kr/EPXDTWPM) 예제 코드 페이지입니다  
 
 ## Python 예제 실행방법  
 

@@ -1,6 +1,6 @@
 # raspi-beginnerKit  
 
-엘레파츠의 라즈베리파이 **입출력 키트(I/O Kit)** 및 **센서 키트(Sensor Kit)의** 예제코드 GitHub 페이지 입니다.  
+엘레파츠의 라즈베리파이 [**입출력 키트(I/O Kit)**](https://www.eleparts.co.kr/EPXDTWPM) 및 [**센서 키트(Sensor Kit)**](https://www.eleparts.co.kr/EPXDTWR8)의 예제 코드 GitHub 페이지 입니다.  
 
 키트별 예제 실행방법에 대한 상세 설명은 **[키트]**-> **[언어(C/Python)]** 페이지에 다시 안내되어 있습니다.  
 
@@ -22,7 +22,7 @@ ls -l
 
 위 디렉토리에서 사용할 예제 디렉토리로 이동해 주시면 됩니다.  
 
-### C언어  
+### > C언어  
 
 C언어 예제 실행을 위해서는 wirringPi 라이브러리 설치가 필요합니다.  
 
@@ -44,7 +44,7 @@ gpio readall
 
 - WiringPi가 공식적으로 지원을 중단함으로 인해 비공식 미러 페이지를 사용합니다.  [(관련 공지 URL)](http://wiringpi.com/wiringpi-deprecated/)  
 
-### 파이썬  
+### > 파이썬  
 
 python3는 아래 명령어로 설치가 가능합니다.  
 다만, 라즈베리파이(라즈비안)에는 파이썬 3가 설치되어 있기 때문에 설치 과정은 생략해도 무관합니다.  

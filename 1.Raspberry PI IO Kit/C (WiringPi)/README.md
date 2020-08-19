@@ -1,6 +1,6 @@
 # Raspberry PI I/O Kit  
 
-[라즈베리파이 입출력 키트](https://www.eleparts.co.kr/EPXDTWPM)  
+[라즈베리파이 입출력 키트](https://www.eleparts.co.kr/EPXDTWPM) 예제 코드 페이지입니다  
 
 ## C언어 사용을 위한 wirringPi 라이브러리 설치  
 

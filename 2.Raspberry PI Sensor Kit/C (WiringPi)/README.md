@@ -1,6 +1,6 @@
 # Raspberry PI Sensor Kit  
 
-[라즈베리파이 센서 키트](https://www.eleparts.co.kr/EPXDTWR8)  
+[라즈베리파이 센서 키트](https://www.eleparts.co.kr/EPXDTWR8) 예제 코드 페이지입니다  
 
 ## C언어 사용을 위한 wirringPi 라이브러리 설치  
 
@@ -44,6 +44,8 @@ gcc -o main main.c -lwiringPi
 
 sudo ./main
 ```
+
+예제 종료는 **`CTRL + C`** 키를 눌러 주시면 됩니다.  
 
 ## 예제 코드 간단 설명  
 

@@ -1,6 +1,6 @@
 # Raspberry PI Sensor Kit  
 
-[라즈베리파이 센서 키트](https://www.eleparts.co.kr/EPXDTWR8)  
+[라즈베리파이 센서 키트](https://www.eleparts.co.kr/EPXDTWR8) 예제 코드 페이지입니다.  
 
 ## Python 예제 실행방법  
 
@@ -20,6 +20,8 @@ sudo python3 2.Passive Infrared Sensor.py
 ...  
 ```
 
+예제 종료는 **`CTRL + C`** 키를 눌러 주시면 됩니다.  
+
 ## 예제 코드 간단 설명  
 
 ### 1.Ultrasonic sensor  
@@ -34,7 +36,7 @@ sudo python3 2.Passive Infrared Sensor.py
 
 온습도 센서 : 온도&습도를 측정하여 터미널로 출력해 줍니다.  
 
-DHT11 온습도 센서 사용을 위해 아래 라이브러리를 설치해 줍니다. (파이썬3)  
+DHT11 온습도 센서 사용을 위해서는 Adafruit_DHT 라이브러리를 설치해 주셔야 합니다. (파이썬3 기준)  
 
 ```bash
 sudo pip3 install Adafruit_DHT  
