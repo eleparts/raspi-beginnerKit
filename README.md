@@ -58,3 +58,19 @@ sudo apt-get install python3
 [라즈베리파이 입출력(I/O) 키트](https://www.eleparts.co.kr/EPXDTWPM)  
 
 [라즈베리파이 센서 키트](https://www.eleparts.co.kr/EPXDTWR8)  
+
+## 추가 자료 - 네이버 블로그  
+
+기존 블로그 자료 URL입니다.  
+
+### 입출력 키트(I/O Kit)  
+
+[라즈베리파이 입출력 키트 GPIO 제어하기-1](https://blog.naver.com/elepartsblog/220284169123)  
+
+[라즈베리파이 입출력 키트 GPIO 제어하기-2](https://blog.naver.com/elepartsblog/220285369508)  
+
+### 센서 키트  
+
+[라즈베리파이 센서 키트 - 초음파 센서 제어하기](https://blog.naver.com/elepartsblog/220288246775)  
+
+[라즈베리파이 센서 키트 - 적외선 물체 감지 센서/터치센서 제어하기](https://blog.naver.com/elepartsblog/220294594150)  
