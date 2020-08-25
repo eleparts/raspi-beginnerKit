@@ -14,7 +14,7 @@
 #include <wiringPi.h>
 #include <softPwm.h> 
 
-#define LED 29 // LED wiringPi 핀 번호 정의 // 4 / 29
+#define LED 4    // LED wiringPi 핀 번호 정의
 
 
 int main (void){
@@ -24,17 +24,17 @@ int main (void){
   }
 
   pinMode (LED, OUTPUT);      
-  softPwmCreate(LED, 0, 100);
+  softPwmCreate(LED, 0, 100);        // LED OUT 핀 PWM 설정
 
   while(1){
 
-    for(int i = 0; i<100; i=i+5){
+    for(int i = 0; i<100; i=i+5){    // PWM 듀티 증가
       
       softPwmWrite(LED,i);
       delay(100);
     }
 
-    for(int i = 100; i>0; i=i-5){
+    for(int i = 100; i>0; i=i-5){     // PWM 듀티 감소
       
       softPwmWrite(LED,i);
       delay(100);
