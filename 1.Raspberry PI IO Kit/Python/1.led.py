@@ -20,7 +20,7 @@ GPIO.setmode(GPIO.BCM)      #BCM 핀 번호 사용
 GPIO.setup(LED, GPIO.OUT)   #LED(BCM 23번 핀) OUT 로 설정
 
 
-try:        
+try:
 
   while 1:
 
