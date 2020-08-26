@@ -44,6 +44,6 @@ PWM 기능은 LED를 매우 빠르게 깜빡이면서 각 깜빡임의 ON/OFF �
 ### 5.adcspi  
   
 ADC IC를 이용하면 라즈베리파이에서 지원하지 않는 ADC 기능을 이용해 아날로그 신호 데이터를 받아볼 수 있습니다.  
-[MCP3204 ADC IC](https://www.eleparts.co.kr/EPX3AHC4)를 이용하여 아날로그 데이터를 입력받고, SPI통신으로 라즈베리파이에 전달하여 출력해 줍니다.  
+[MCP3204 ADC IC(별도 구매)](https://www.eleparts.co.kr/EPX3AHC4)를 이용하여 아날로그 데이터를 입력받고, SPI통신으로 라즈베리파이에 전달하여 출력해 줍니다.  
 단, SPI 통신을 사용하기 위해서는 라즈베리파이 설정 창에서 **SPI 기능을 Enable** 해 주어야 합니다.  
   
