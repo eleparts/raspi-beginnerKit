@@ -53,6 +53,14 @@ python3는 아래 명령어로 설치가 가능합니다.
 sudo apt-get install python3  
 ```
 
+## 입출력 키트 추가 구성 상품 안내  
+
+입출력(I/O) 키트의 가변저항을 이용한 아날로그 입력 기능을 위한 ADC IC (별매) 링크입니다.  
+
+[MCP3204 ADC IC](https://www.eleparts.co.kr/EPX3AHC4)  
+
+해당하는 예제는 [I/O키트] -> [5.adcspi] 입니다.  
+
 ## 엘레파츠 입출력 & 센서 키트 바로가기  
 
 [라즈베리파이 입출력(I/O) 키트](https://www.eleparts.co.kr/EPXDTWPM)  
