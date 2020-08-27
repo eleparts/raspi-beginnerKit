@@ -27,8 +27,7 @@
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
 
-#define CS 6
-#define CHANNEL 0
+#define CHANNEL 0             // SPI_CE0_N 사용(SPI 0번 채널)
 #define SPEED 1000000
 
 
@@ -48,9 +47,7 @@ int spi_read(int channel){    // MCP320x SPI 데이터 수신 함수
   data[0] = startBit + sglDiff + D2;
   data[1] = D1 + D0;
 
-  digitalWrite(CS, LOW);
   wiringPiSPIDataRW(CHANNEL, data, 3);
-  digitalWrite(CS, HIGH);
 
   data[1] = 0x0F & data[1];
   adcValue = ((data[1] & 0x0F) << 8) + data[2];
@@ -66,8 +63,6 @@ int main (void){
 
   if(wiringPiSPISetup(CHANNEL, SPEED) == -1)    // SPI 설정
     return -1;
-    
-  pinMode(CS, OUTPUT);                          // SPI Chip Select pin 설정
 
   printf("Raspberry PI ADC Test(MCP3204/3208)\r\n");
 
