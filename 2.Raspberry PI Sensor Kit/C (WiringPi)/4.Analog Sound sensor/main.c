@@ -24,26 +24,26 @@
 
 int main (void){
 
-  if (wiringPiSetup() == -1){
-    return 1;
-  }
-
-  pinMode(LED, OUTPUT);     // LED 제어 핀을 출력으로 설정
-  pinMode(DOUT, INPUT);     // Sound 센서 디지털 데이터 수신 핀을 입력으로 설정
-
-  digitalWrite(LED, 0);     // LED 초기값 Off
-
-  while(1){
-
-    if(digitalRead(DOUT) == 0){   // Sound 센서로부터 신호가 수신되면 (대기 HIGH, 소리 인식시 LOW)
-  
-      digitalWrite(LED, 1);       // LED On
-      delay(500);                 // 500mS 지연
-
-      digitalWrite(LED, 0);       // LED Off
-      delay(200);                 // 200mS 지연
+    if (wiringPiSetup() == -1){
+        return 1;
     }
-  }
 
-  return 0;
+    pinMode(LED, OUTPUT);     // LED 제어 핀을 출력으로 설정
+    pinMode(DOUT, INPUT);     // Sound 센서 디지털 데이터 수신 핀을 입력으로 설정
+
+    digitalWrite(LED, 0);     // LED 초기값 Off
+
+    while(1){
+
+        if(digitalRead(DOUT) == 0){   // Sound 센서로부터 신호가 수신되면 (대기 HIGH, 소리 인식시 LOW)
+    
+            digitalWrite(LED, 1);       // LED On
+            delay(500);                 // 500mS 지연
+
+            digitalWrite(LED, 0);       // LED Off
+            delay(200);                 // 200mS 지연
+        }
+    }
+
+    return 0;
 }

@@ -19,26 +19,26 @@
 
 int main (void){
 
-  if(wiringPiSetup() == -1){
-    return 1;
-  }
-
-  pinMode (LED, OUTPUT);      
-  softPwmCreate(LED, 0, 100);        // LED OUT 핀 PWM 설정
-
-  while(1){
-
-    for(int i = 0; i<100; i=i+5){    // PWM 듀티 증가
-      
-      softPwmWrite(LED,i);
-      delay(100);
+    if(wiringPiSetup() == -1){
+        return 1;
     }
 
-    for(int i = 100; i>0; i=i-5){     // PWM 듀티 감소
-      
-      softPwmWrite(LED,i);
-      delay(100);
+    pinMode (LED, OUTPUT);      
+    softPwmCreate(LED, 0, 100);        // LED OUT 핀 PWM 설정
+
+    while(1){
+
+        for(int i = 0; i<100; i=i+5){    // PWM 듀티 증가
+            
+            softPwmWrite(LED,i);
+            delay(100);
+        }
+
+        for(int i = 100; i>0; i=i-5){     // PWM 듀티 감소
+            
+            softPwmWrite(LED,i);
+            delay(100);
+        }
     }
-  }
-  return 0;
+    return 0;
 }

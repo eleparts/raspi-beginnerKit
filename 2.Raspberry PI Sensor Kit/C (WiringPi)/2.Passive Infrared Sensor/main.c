@@ -25,27 +25,27 @@
 
 int main (void){
 
-  if (wiringPiSetup() == -1){
-    return 1;
-  }
-
-  pinMode(LED, OUTPUT);   // LED 제어 핀을 출력으로 설정
-  pinMode(PIR, INPUT);    // PIR 센서 데이터 수신 핀을 입력으로 설정
-
-  digitalWrite(LED, 0);   // LED 초기값 Off
-
-  while(1){
-
-    if(digitalRead(PIR)){     // PIR 센서로부터 HIGH 신호가 수신되면
-  
-      digitalWrite(LED, 1);   // LED On
-      delay(200);             // 200mS 지연
-    }else{
-
-      digitalWrite(LED, 0);   // LED Off
-      delay(200);             // 200mS 지연    
+    if (wiringPiSetup() == -1){
+        return 1;
     }
-  }
 
-  return 0;
+    pinMode(LED, OUTPUT);   // LED 제어 핀을 출력으로 설정
+    pinMode(PIR, INPUT);    // PIR 센서 데이터 수신 핀을 입력으로 설정
+
+    digitalWrite(LED, 0);   // LED 초기값 Off
+
+    while(1){
+
+        if(digitalRead(PIR)){     // PIR 센서로부터 HIGH 신호가 수신되면
+    
+            digitalWrite(LED, 1);   // LED On
+            delay(200);             // 200mS 지연
+        }else{
+
+            digitalWrite(LED, 0);   // LED Off
+            delay(200);             // 200mS 지연    
+        }
+    }
+
+    return 0;
 }

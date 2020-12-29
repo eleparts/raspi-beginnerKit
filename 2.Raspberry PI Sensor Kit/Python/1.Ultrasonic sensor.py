@@ -29,29 +29,29 @@ GPIO.setup(ECHO, GPIO.IN)
 
 try :
 
-  while True :
+    while True :
 
-    GPIO.output(TRIG, False)
-    time.sleep(0.00001)
+        GPIO.output(TRIG, False)
+        time.sleep(0.00001)
 
-    GPIO.output(TRIG, True)                   # 10us 초음파 방사
-    time.sleep(0.00001)
-    GPIO.output(TRIG, False)
+        GPIO.output(TRIG, True)                   # 10us 초음파 방사
+        time.sleep(0.00001)
+        GPIO.output(TRIG, False)
 
-    while(GPIO.input(ECHO) == 0):             # 초음파 송신 시간
-      pulse_start = time.time()
+        while(GPIO.input(ECHO) == 0):             # 초음파 송신 시간
+            pulse_start = time.time()
 
-    while(GPIO.input(ECHO) == 1):             # 초음파 수신 시간
-      pulse_end = time.time()
+        while(GPIO.input(ECHO) == 1):             # 초음파 수신 시간
+            pulse_end = time.time()
 
-    pulse_duration = pulse_end - pulse_start  # 초음파 총 이동 시간 계산 
+        pulse_duration = pulse_end - pulse_start  # 초음파 총 이동 시간 계산 
 
-    distance = pulse_duration * (34000 / 2)   # 초음파 이동 시간으로 거리 계산 (공기 중 초음파 속도 약 340m/s, 이동거리/2)
-    distance = round(distance, 1)
+        distance = pulse_duration * (34000 / 2)   # 초음파 이동 시간으로 거리 계산 (공기 중 초음파 속도 약 340m/s, 이동거리/2)
+        distance = round(distance, 1)
 
-    print("Distance: ", distance, "cm")
+        print("Distance: ", distance, "cm")
 
-    time.sleep(0.2)
+        time.sleep(0.2)
 
 finally:
-    GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
+        GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 

@@ -41,27 +41,27 @@ GPIO.setup(SW_G, GPIO.IN)   # 초록색 LED제어 스위치 입력핀으로 설�
 
 try:
 
-  while 1:
+    while 1:
 
-    GPIO.output(LED_Y, False)   # LED 초기값 Off
-    GPIO.output(LED_R, False) 
-    GPIO.output(LED_G, False) 
+        GPIO.output(LED_Y, False)   # LED 초기값 Off
+        GPIO.output(LED_R, False) 
+        GPIO.output(LED_G, False) 
 
-    if (GPIO.input(SW_Y) == 0):   # 노랑색 LED제어 스위치가 눌리면
+        if (GPIO.input(SW_Y) == 0):   # 노랑색 LED제어 스위치가 눌리면
 
-      GPIO.output(LED_Y, True)    # 노랑색 LED On
-      time.sleep(0.5)  # 0.5초 지연
+            GPIO.output(LED_Y, True)    # 노랑색 LED On
+            time.sleep(0.5)  # 0.5초 지연
 
-    if (GPIO.input(SW_R) == 0):   # 빨간색 LED제어 스위치가 눌리면
+        if (GPIO.input(SW_R) == 0):   # 빨간색 LED제어 스위치가 눌리면
 
-      GPIO.output(LED_R, True)    # 빨간색 LED On
-      time.sleep(0.5)  # 0.5초 지연
-    
-    if (GPIO.input(SW_G) == 0):   # 초록색 LED제어 스위치가 눌리면
+            GPIO.output(LED_R, True)    # 빨간색 LED On
+            time.sleep(0.5)  # 0.5초 지연
+        
+        if (GPIO.input(SW_G) == 0):   # 초록색 LED제어 스위치가 눌리면
 
-      GPIO.output(LED_G, True)    # 초록색 LED On
-      time.sleep(0.5)  # 0.5초 지연
+            GPIO.output(LED_G, True)    # 초록색 LED On
+            time.sleep(0.5)  # 0.5초 지연
 
 finally:
-    GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
-    
+        GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
+        

@@ -33,36 +33,36 @@ spi.bits_per_word=8
 
 
 def spi_read(channel=0,sglDiff=1):    # MCP320x SPI 데이터 수신 함수
-  
-  if(7 < channel or 0 > channel) or (sglDiff < 0 or sglDiff > 1):
-    return -1
+    
+    if(7 < channel or 0 > channel) or (sglDiff < 0 or sglDiff > 1):
+        return -1
 
-  # start High + 4bit 송신, 1clock 후 LOW + 12bit data 수신
-  startBit = 0x04
-  sglDiff  = sglDiff * 0x02
-  D2 = int((channel/4)%2) * 0x01
-  D1 = int((channel/2)%2) * 0x80
-  D0 = int((channel)%2) * 0x40
+    # start High + 4bit 송신, 1clock 후 LOW + 12bit data 수신
+    startBit = 0x04
+    sglDiff  = sglDiff * 0x02
+    D2 = int((channel/4)%2) * 0x01
+    D1 = int((channel/2)%2) * 0x80
+    D0 = int((channel)%2) * 0x40
 
-  send1 = startBit + sglDiff + D2
-  send2 = D1 + D0
+    send1 = startBit + sglDiff + D2
+    send2 = D1 + D0
 
-  data = spi.xfer2([send1,send2,0,0])
-  adcValue = ((data[1] & 0x0F) << 8) + data[2]
+    data = spi.xfer2([send1,send2,0,0])
+    adcValue = ((data[1] & 0x0F) << 8) + data[2]
 
-  return adcValue
+    return adcValue
 
 
 try:
-  while 1:
-    
-    # ADC 각 채널별로 터미널창에 출력
-    print("ch0 : %d", spi_read(0))
-    print("ch1 : %d", spi_read(1))
-    print("ch2 : %d", spi_read(2))
-    print("ch3 : %d", spi_read(3))
-    print("-----------------")
-    time.sleep(0.1)
+    while 1:
+        
+        # ADC 각 채널별로 터미널창에 출력
+        print("ch0 : %d", spi_read(0))
+        print("ch1 : %d", spi_read(1))
+        print("ch2 : %d", spi_read(2))
+        print("ch3 : %d", spi_read(3))
+        print("-----------------")
+        time.sleep(0.1)
 
 finally:
-  spi.close()       # SPI 종료
+    spi.close()       # SPI 종료

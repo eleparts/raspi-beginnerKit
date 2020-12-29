@@ -29,24 +29,24 @@ DHT11_PIN = 21    # DHT11 BCM 핀 번호 정의
 
 try:
 
-  while 1 :
+    while 1 :
 
-    # Try to grab a sensor reading.  Use the read_retry method which will retry up
-    # to 15 times to get a sensor reading (waiting 2 seconds between each retry).
-    humidity, temperature = Adafruit_DHT.read_retry(DHT11, DHT11_PIN)
+        # Try to grab a sensor reading.  Use the read_retry method which will retry up
+        # to 15 times to get a sensor reading (waiting 2 seconds between each retry).
+        humidity, temperature = Adafruit_DHT.read_retry(DHT11, DHT11_PIN)
 
-    # Un-comment the line below to convert the temperature to Fahrenheit.
-    # temperature = temperature * 9/5.0 + 32
+        # Un-comment the line below to convert the temperature to Fahrenheit.
+        # temperature = temperature * 9/5.0 + 32
 
-    if humidity is not None and temperature is not None:
-        print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
+        if humidity is not None and temperature is not None:
+                print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
 
-    else:
-        print('Failed to get reading. Try again!')
-        # sys.exit(1)
+        else:
+                print('Failed to get reading. Try again!')
+                # sys.exit(1)
 
 finally:
-    GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
+        GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
 
 
 

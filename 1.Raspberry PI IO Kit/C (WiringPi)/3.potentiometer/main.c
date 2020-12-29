@@ -27,27 +27,27 @@
 
 int main (void){
 
-  if (wiringPiSetup() == -1){
-    return 1;
-  }
-
-  pinMode(LED, OUTPUT);             // LED 출력핀으로 설정
-  pinMode(potentiometer, INPUT);    // 가변 저항 입력핀으로 설정
-  digitalWrite(LED, 0);             // LED 초기값 Off
-
-
-  while(1){
-
-    if(digitalRead(potentiometer)){  // 가변저항으로 입력되는 값이 HIGH인 경우
-  
-      digitalWrite(LED, 1);          // LED On
-      delay(200); // 200ms(0.2초) 지연
-
-    }else{                           // 가변저항으로 입력되는 값이 LOW인 경우
-
-      digitalWrite(LED, 0);          // LED Off
-      delay(200); // 200ms(0.2초) 지연
+    if (wiringPiSetup() == -1){
+        return 1;
     }
-  }
-  return 0;
+
+    pinMode(LED, OUTPUT);             // LED 출력핀으로 설정
+    pinMode(potentiometer, INPUT);    // 가변 저항 입력핀으로 설정
+    digitalWrite(LED, 0);             // LED 초기값 Off
+
+
+    while(1){
+
+        if(digitalRead(potentiometer)){  // 가변저항으로 입력되는 값이 HIGH인 경우
+    
+            digitalWrite(LED, 1);          // LED On
+            delay(200); // 200ms(0.2초) 지연
+
+        }else{                           // 가변저항으로 입력되는 값이 LOW인 경우
+
+            digitalWrite(LED, 0);          // LED Off
+            delay(200); // 200ms(0.2초) 지연
+        }
+    }
+    return 0;
 }

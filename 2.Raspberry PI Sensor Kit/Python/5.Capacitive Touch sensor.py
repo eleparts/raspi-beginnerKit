@@ -9,7 +9,7 @@
 * VCC 핀  : 3.3V | GND 핀 : GND
 * DOUT    : GPIO 40번 | BCM : 21
 *
-* ※ 모듈 연결 시 극성에 주의해 주도록 합니다.
+* ※ 모듈 연결 시 극성에 주의해 주도록 합니다. b
 * 모듈 연결 시 전용 커넥터 케이블 연결 후 M/F 케이블을 이용해 라즈베리파이에 꽂아 주면 편리합니다.
 * 라즈베리파이의 GND 핀은 여러개가 있으니 브레드보드를 통해 GND핀을 연결하지 않고 직접(ex 39번 핀) 꽂아 주어도 됩니다.
 * 터치센서 보드에도 감지 LED가 있으며, 만약 터치 동작이 잘 안 되는 경우 터치 모듈의 연결 커넥터를 뽑았다가 다시 꽂아주시면 정상 동작됩니다. (기준 감지값 초기화)
@@ -34,19 +34,19 @@ GPIO.output(LED, False)     # LED 초기값 Off
 
 try:
 
-  while 1:
+    while 1:
 
-    if (GPIO.input(DOUT)) :       # 터치 센서로부터 신호가 수신되면 (기본 LOW, 터치 인식시 HIGH)
-      
-      GPIO.output(LED, True)      # LED On
-      
-    else:
-      GPIO.output(LED, False)     # LED Off
+        if (GPIO.input(DOUT)) :       # 터치 센서로부터 신호가 수신되면 (기본 LOW, 터치 인식시 HIGH)
+            
+            GPIO.output(LED, True)    # LED On
+            
+        else:
+            GPIO.output(LED, False)   # LED Off
 
-    time.sleep(0.2)               # 0.2초 지연
-    
+        time.sleep(0.2)               # 0.2초 지연
+        
 finally:
-    GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
-    
+        GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
+        
 
 

@@ -34,18 +34,18 @@ GPIO.output(LED, False)              # LED 초기값 Off
 
 try:
 
-  while 1:
+    while 1:
 
-    if (GPIO.input(potentiometer)):  # 가변저항으로 입력되는 값이 HIGH인 경우
+        if (GPIO.input(potentiometer)):  # 가변저항으로 입력되는 값이 HIGH인 경우
 
-      GPIO.output(LED, True)         # LED On
-      time.sleep(0.2)                # 0.2초 지연
+            GPIO.output(LED, True)         # LED On
+            time.sleep(0.2)                # 0.2초 지연
 
-    else:                            # 가변저항으로 입력되는 값이 LOW인 경우
+        else:                            # 가변저항으로 입력되는 값이 LOW인 경우
 
-      GPIO.output(LED, False)        # LED Off
-      time.sleep(0.2)                # 0.2초 지연
+            GPIO.output(LED, False)        # LED Off
+            time.sleep(0.2)                # 0.2초 지연
 
 finally:
-    GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
-    
+        GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
+        

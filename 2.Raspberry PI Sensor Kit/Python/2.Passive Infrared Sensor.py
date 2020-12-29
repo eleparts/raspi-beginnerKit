@@ -34,19 +34,19 @@ GPIO.output(LED, False)   # LED 초기값 Off
 
 try:
 
-  while 1:
+    while 1:
 
-    if (GPIO.input(PIR)):       # PIR 센서로부터 HIGH 신호가 수신되면
+        if (GPIO.input(PIR)):       # PIR 센서로부터 HIGH 신호가 수신되면
 
-      GPIO.output(LED, True)    # LED On
-      time.sleep(0.2)           # 0.2초 지연
-    else:
+            GPIO.output(LED, True)    # LED On
+            time.sleep(0.2)           # 0.2초 지연
+        else:
 
-      GPIO.output(LED, False)   # LED Off
-      time.sleep(0.2)           # 0.2초 지연
+            GPIO.output(LED, False)   # LED Off
+            time.sleep(0.2)           # 0.2초 지연
 
 finally:
-    GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
-    
+        GPIO.cleanup()      # GPIO 상태 초기화, 없을 경우 예제 재 실행 시 사용중인 GPIO 경고 발생 
+        
 
 

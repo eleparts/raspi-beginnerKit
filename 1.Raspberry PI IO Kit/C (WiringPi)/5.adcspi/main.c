@@ -33,49 +33,49 @@
 
 int spi_read(int channel){    // MCP320x SPI 데이터 수신 함수
 
-  unsigned char data[3] = {0,};
-  int adcValue = 0;
-  int startBit, sglDiff, D0, D1, D2;
+    unsigned char data[3] = {0,};
+    int adcValue = 0;
+    int startBit, sglDiff, D0, D1, D2;
 
-  // start High + 4bit 송신, 1clock 후 LOW + 12bit data 수신
-  startBit = 0x04;
-  sglDiff  = 0x02;
-  D2 = ((channel/4)%2) * 0x01;
-  D1 = ((channel/2)%2) * 0x80;
-  D0 = ((channel)%2) * 0x40;
+    // start High + 4bit 송신, 1clock 후 LOW + 12bit data 수신
+    startBit = 0x04;
+    sglDiff  = 0x02;
+    D2 = ((channel/4)%2) * 0x01;
+    D1 = ((channel/2)%2) * 0x80;
+    D0 = ((channel)%2) * 0x40;
 
-  data[0] = startBit + sglDiff + D2;
-  data[1] = D1 + D0;
+    data[0] = startBit + sglDiff + D2;
+    data[1] = D1 + D0;
 
-  wiringPiSPIDataRW(CHANNEL, data, 3);
+    wiringPiSPIDataRW(CHANNEL, data, 3);
 
-  data[1] = 0x0F & data[1];
-  adcValue = ((data[1] & 0x0F) << 8) + data[2];
+    data[1] = 0x0F & data[1];
+    adcValue = ((data[1] & 0x0F) << 8) + data[2];
 
-  return adcValue;
+    return adcValue;
 }
 
 
 int main (void){
 
-  if(wiringPiSetup() == -1)
-    return -1;
+    if(wiringPiSetup() == -1)
+        return -1;
 
-  if(wiringPiSPISetup(CHANNEL, SPEED) == -1)    // SPI 설정
-    return -1;
+    if(wiringPiSPISetup(CHANNEL, SPEED) == -1)    // SPI 설정
+        return -1;
 
-  printf("Raspberry PI ADC Test(MCP3204/3208)\r\n");
+    printf("Raspberry PI ADC Test(MCP3204/3208)\r\n");
 
-  while(1){
+    while(1){
 
-    // ADC 각 채널별로 터미널창에 출력
-    printf("ch0 : %d\r\n", spi_read(0));
-    printf("ch1 : %d\r\n", spi_read(1));
-    printf("ch2 : %d\r\n", spi_read(2));
-    printf("ch3 : %d\r\n", spi_read(3));
-    printf("-----------------\r\n");
-    delay(100);
-  }
+        // ADC 각 채널별로 터미널창에 출력
+        printf("ch0 : %d\r\n", spi_read(0));
+        printf("ch1 : %d\r\n", spi_read(1));
+        printf("ch2 : %d\r\n", spi_read(2));
+        printf("ch3 : %d\r\n", spi_read(3));
+        printf("-----------------\r\n");
+        delay(100);
+    }
 
-  return 0;
+    return 0;
 }

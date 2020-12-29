@@ -17,21 +17,21 @@
 
 int main (void){
 
-  if(wiringPiSetup() == -1){
-    return 1;
-  }
+    if(wiringPiSetup() == -1){
+        return 1;
+    }
 
-  pinMode (LED1, OUTPUT);
+    pinMode (LED1, OUTPUT);
 
-  while(1){
+    while(1){
 
-    digitalWrite (LED1, 1); // LED ON
-    delay (1000); // delay_1S
+        digitalWrite (LED1, 1); // LED ON
+        delay (1000); // delay_1S
 
-    digitalWrite (LED1, 0); // LED OFF
-    delay (1000); // delay_1S
+        digitalWrite (LED1, 0); // LED OFF
+        delay (1000); // delay_1S
 
-  }
+    }
 
-  return 0;
+    return 0;
 }
