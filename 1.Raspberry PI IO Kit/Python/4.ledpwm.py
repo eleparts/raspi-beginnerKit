@@ -28,12 +28,12 @@ try:
 
     while 1:
 
-        for duty in range(0,100,5):   # duty 를 0부터 100까지 증가
+        for duty in range(0,100,5):     # duty 를 0부터 100까지 증가
 
             pwm.ChangeDutyCycle(duty)   # duty 변경, 0-100 범위(%), 각 깜빡임 당 on/off 비율 조정
             time.sleep(0.1)
 
-        for duty in range(100,0,-5):  # duty 를 100부터 0으로 감소
+        for duty in range(100,0,-5):    # duty 를 100부터 0으로 감소
 
             pwm.ChangeDutyCycle(duty)
             time.sleep(0.1)

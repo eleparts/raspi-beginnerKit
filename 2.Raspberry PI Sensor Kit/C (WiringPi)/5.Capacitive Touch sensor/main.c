@@ -37,16 +37,16 @@ int main (void){
 
     while(1){
 
-        if(digitalRead(DOUT)){     // 터치 센서로부터 신호가 수신되면
+        if(digitalRead(DOUT)){      // 터치 센서로부터 신호가 수신되면
             
-            digitalWrite(LED, 1);    // LED On
+            digitalWrite(LED, 1);   // LED On
             
         }else{
             
-            digitalWrite(LED, 0);    // LED Off      
+            digitalWrite(LED, 0);   // LED Off      
         }
 
-        delay(200);                // 200mS 지연
+        delay(200);                 // 200mS 지연
     }
     return 0;
 }

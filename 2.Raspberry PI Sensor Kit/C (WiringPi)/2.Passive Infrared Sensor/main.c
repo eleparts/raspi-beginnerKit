@@ -36,7 +36,7 @@ int main (void){
 
     while(1){
 
-        if(digitalRead(PIR)){     // PIR 센서로부터 HIGH 신호가 수신되면
+        if(digitalRead(PIR)){       // PIR 센서로부터 HIGH 신호가 수신되면
     
             digitalWrite(LED, 1);   // LED On
             delay(200);             // 200mS 지연

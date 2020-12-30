@@ -26,10 +26,10 @@ PIR = 21 # PIR 센서 BCM 핀 번호 정의
 
 GPIO.setmode(GPIO.BCM)      #BCM 핀 번호 사용
 
-GPIO.setup(LED, GPIO.OUT)  # LED 제어 핀을 출력으로 설정
-GPIO.setup(PIR, GPIO.IN)   # PIR 센서 데이터 수신 핀을 입력으로 설정
+GPIO.setup(LED, GPIO.OUT)   # LED 제어 핀을 출력으로 설정
+GPIO.setup(PIR, GPIO.IN)    # PIR 센서 데이터 수신 핀을 입력으로 설정
 
-GPIO.output(LED, False)   # LED 초기값 Off
+GPIO.output(LED, False)     # LED 초기값 Off
 
 
 try:
