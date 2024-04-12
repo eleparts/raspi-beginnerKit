@@ -42,22 +42,34 @@ wirringPi 설치 확인 및 GPIO 번호 출력
 gpio readall  
 ```
 
-- WiringPi가 공식적으로 지원을 중단함으로 인해 비공식 미러 페이지를 사용합니다.  [(관련 공지 URL)](http://wiringpi.com/wiringpi-deprecated/)  
+- 기존 제작자(Gordon)의 WiringPi가 공식적으로 지원을 중단함으로 인해 후속 WiringPi 작업 페이지를 사용합니다.  
+[(Gordon's WiringPi 페이지 아카이브 - 지원 종료 안내)](https://web.archive.org/web/20220405225008/http://wiringpi.com/wiringpi-deprecated/)  
+  
+- 사용되는 후속 WiringPi 라이브러리 정보 : <https://github.com/WiringPi/WiringPi>  
 
+- ※ (24년 04월) WiringPi는 PI5 지원을 위한 업데이트 중이지만, 일부 기능[(PWM등)](https://github.com/GrazerComputerClub/WiringPi/issues/21)에 제한이 있을 수 있습니다.  
+  
 ### > 파이썬  
 
-python3는 아래 명령어로 설치가 가능합니다.  
-다만, 라즈베리파이(라즈비안)에는 파이썬 3가 설치되어 있기 때문에 설치 과정은 생략해도 무관합니다.  
+라즈베리파이 OS에는 파이썬이 이미 설치되어 있기 때문에 바로 예제를 실행할 수 있습니다.  
+만약 파이썬 설치가 필요한 경우 아래 명령어로 설치할 수 있습니다.  
 
 ```bash
-sudo apt-get install python3  
+sudo apt-get install python  
 ```
+  
+**라즈베리파이 5** 사용 시 아래 명령어로 **LGPIO**를 설치해 주어야 RPi.GPIO 라이브러리 사용이 가능합니다.  
 
+```bash  
+# 반드시 PI 5 사용시에만 설치
+pip install --break-system-packages rpi-lgpio
+```
+  
 ## 입출력 키트 추가 구성 상품 안내  
 
 입출력(I/O) 키트의 가변저항을 이용한 아날로그 입력 기능을 위한 ADC IC (별매) 링크입니다.  
 
-[MCP3204 ADC IC](https://www.eleparts.co.kr/EPX3AHC4)  
+[MCP3204 ADC IC](https://www.eleparts.co.kr/EPXJ9R68)  
 
 해당하는 예제는 [I/O키트] -> [5.adcspi] 입니다.  
 
