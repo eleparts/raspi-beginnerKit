@@ -1,22 +1,33 @@
 # Raspberry PI I/O Kit  
 
 [라즈베리파이 입출력 키트](https://www.eleparts.co.kr/EPXDTWPM) 예제 코드 페이지입니다  
+  
+## 라즈베리파이 5 사용 시 LGPIO 설치  
+  
+**라즈베리파이 5** 사용 시 아래 명령어로 **LGPIO**를 설치해 주어야 RPi.GPIO 라이브러리 사용이 가능합니다.  
 
+```bash  
+# 반드시 PI 5 사용시에만 설치
+pip install --break-system-packages rpi-lgpio
+```
+  
+Pi5가 아닌 경우 설치하면 분제가 생길 수 있습니다.  
+  
 ## Python 예제 실행방법  
 
 회로 연결은 **Schematics 디렉토리의 이미지 파일** 및 각 **예제 상단의 GPIO 안내**를 따라 해 주시면 됩니다.  
 
-예제 실행은 각 예제를 `python3` 로 실행해 주시면 됩니다.
+예제 실행은 각 예제를 `python` 로 실행해 주시면 됩니다.
 
 ```bash
-sudo python3 (예제 파일명).py
+python (예제 파일명).py
 ```
 
-ex)
+ex)  
 
 ```bash
-sudo python3 led.py
-sudo python3 ledsw.py
+python led.py
+python ledsw.py
 ```
 
 예제 종료는 **`CTRL + C`** 키를 눌러 주시면 됩니다.  

@@ -20,7 +20,12 @@ cd WiringPi
 ./build  
 ```
 
-- WiringPi가 공식적으로 지원을 중단함으로 인해 비공식 미러 페이지를 사용합니다.  [(관련 공지 URL)](http://wiringpi.com/wiringpi-deprecated/)  
+- 기존 제작자(Gordon)의 WiringPi가 공식적으로 지원을 중단함으로 인해 후속 WiringPi 작업 페이지를 사용합니다.  
+[(Gordon's WiringPi 페이지 아카이브 - 지원 종료 안내)](https://web.archive.org/web/20220405225008/http://wiringpi.com/wiringpi-deprecated/)  
+  
+- 사용되는 후속 WiringPi 라이브러리 정보 : <https://github.com/WiringPi/WiringPi>  
+
+- ※ (24년 04월) WiringPi는 PI5 지원을 위한 업데이트 중이지만, 일부 기능[(PWM등)](https://github.com/GrazerComputerClub/WiringPi/issues/21)에 제한이 있을 수 있습니다.  
 
 GPIO 번호 확인
 
@@ -35,7 +40,7 @@ gpio readall
   
 ## C언어 예제 실행방법  
 
-회로 연결은 Schematics 디렉토리의 이미지 파일 및 각 예제 상단의 GPIO 안내를 따라 해 주시면 됩니다.  
+회로 연결은 **Schematics 디렉토리의 이미지 파일** 및 각 **예제 상단의 GPIO 안내**를 따라 해 주시면 됩니다.  
 
 예제 실행은 각 예제 디렉토리로 이동해 아래 명령어로 컴파일&실행해 주시면 됩니다.  
 
