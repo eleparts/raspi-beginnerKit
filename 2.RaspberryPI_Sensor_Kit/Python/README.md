@@ -1,4 +1,4 @@
-# Raspberry PI Sensor Kit  
+# RaspberryPI Sensor Kit  
 
 [라즈베리파이 센서 키트](https://www.eleparts.co.kr/EPXDTWR8) 예제 코드 페이지입니다.  
   
@@ -35,15 +35,15 @@ python 2.Passive Infrared Sensor.py
 
 ## 예제 코드 간단 설명  
 
-### 1.Ultrasonic sensor  
+### 1.Ultrasonic_sensor  
 
 초음파 센서 : 초음파를 발사, 정면에 있는 물체(장애물)과의 거리를 측정해 터미널로 출력해 줍니다.  
 
-### 2.Passive Infrared Sensor (PIR sensor)  
+### 2.Passive_Infrared_sensor (PIR sensor)  
 
 디지털 적외선 물체 감지 센서 : 센서 정면 일정 범위의 움직임을 감지하여 LED를 ON 해 줍니다.  
 
-### 3.Temp humidity sensor  
+### 3.Temp_Humidity_sensor  
   
 온습도 센서 : 온도&습도를 측정하여 터미널로 출력해 줍니다.  
 
@@ -53,7 +53,7 @@ DHT11 온습도 센서 사용을 위해서는 Adafruit_DHT 라이브러리를 �
 pip install --break-system-packages Adafruit_DHT  
 ```
 
-### 3-1.Temp_humidity_sensor_pi5  
+### 3-1.Temp_Humidity_sensor_pi5  
   
 **PI5**에서 **Adafruit_DHT 라이브러리가 설치되지 않는 경우** 본 예제를 사용합니다.  
 /boot/firmware/config.txt 파일에 아래 명령어를 추가해 줍니다.  
@@ -77,10 +77,10 @@ cat /sys/bus/iio/devices/iio:device0/in_temp_input
 위 두 명령어로 간단하게 데이터를 출력 해 볼 수 있습니다. (소수점 아래 3자리까지 소수점 없이 출력됨)  
 이후 예제 경로에서 `python 3-1.Temp_humidity_sensor_pi5.py`로 예제를 실행해 볼 수 있습니다.  
   
-### 4.Analog Sound Sensor  
+### 4.Analog_Sound_sensor  
 
 아날로그 사운드 센서 : 소리가 감지되면 잠시 LED를 켜 줍니다.  
 
-### 5.Capacitive Touch Sensor  
+### 5.Capacitive_Touch_sensor  
 
 디지털 정전식 터치센서 : 터치가 감지되면 LED를 켜 줍니다.  

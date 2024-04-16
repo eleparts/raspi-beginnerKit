@@ -1,5 +1,5 @@
 '''
-* 라즈베리파이 센서 키트 Temp & humidity sensor 동작 예제 / Raspberry PI 5용 예제
+* 라즈베리파이 센서 키트 Temp & Humidity sensor 동작 예제 / Raspberry PI 5용 예제
 *
 * 본 예제는 온습도 센서에서 수신된 데이터를 터미널 창으로 반복해 출력하는 동작을 합니다.
 * 
@@ -10,7 +10,7 @@
 *
 * ※ 모듈 연결 시 극성에 주의해 주도록 합니다.
 *
-* 예제 실행 전 /boot/firmware/config.txt 경로에 dtoverlay=dht11,gpiopin=21 를 추가해 줍니다.
+* 예제 실행 전 /boot/firmware/config.txt 경로에 dtoverlay=dht11,gpiopin=21 를 추가 후 재부팅해 줍니다.
 *
 * 키트 정보 : https://www.eleparts.co.kr/EPXDTWR8
 *
